@@ -18,33 +18,37 @@
     
     <!-- START NAVBAR -->
     <header>
-        <nav class="navbar navbar-expand-lg border-bottom">
-            <img src="./images/logo.svg" class="navbar-brand ms-5" alt="">
-        
-
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav"><span class="navbar-toggler-icon"></span></button>
-
-        <div id="mynav" class="navbar-collapse collapse justify-content-between mx-lg-5">
-            <ul class="navbar-nav">
-                <li class="navbar-item"><a href="#" class="nav-link text-muted">Collections</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link text-muted">Men</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link text-muted">Women</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link text-muted">About</a></li>
-                <li class="navbar-item"><a href="#" class="nav-link text-muted">Contact</a></li>
-            </ul>
-            <ul class="navbar-nav align-items-center">
-                <li class="navbar-item"><a href="#" class="nav-link me-lg-3"><img src="./images/icon-cart.svg" alt=""></a></li>
-                <li class="navbar-item"><a href="#" class="nav-link"><img src="./images/image-avatar.png" style="width: 50px;" alt=""></a></li>
-            </ul>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg border-bottom">
+                <a href="index.html"><img src="./images/logo.svg" class="navbar-brand" alt=""></a>
+            
+    
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <img src="./images/icon-menu.svg" class="img-fluid" alt="">
+            </button>
+    
+            <div id="mynav" class="navbar-collapse collapse justify-content-between mx-lg-5">
+                <ul class="navbar-nav">
+                    <li class="navbar-item hoverparents"><a href="#" class="nav-link text-muted hoverlines me-2">Collections</a></li>
+                    <li class="navbar-item hoverparents"><a href="#" class="nav-link text-muted hoverlines me-2">Men</a></li>
+                    <li class="navbar-item hoverparents"><a href="#" class="nav-link text-muted hoverlines me-2">Women</a></li>
+                    <li class="navbar-item hoverparents"><a href="#" class="nav-link text-muted hoverlines me-2">About</a></li>
+                    <li class="navbar-item hoverparents"><a href="#" class="nav-link text-muted hoverlines me-2">Contact</a></li>
+                </ul>
+                <ul class="navbar-nav align-items-center">
+                    <li class="navbar-item"><button id="checkoutbtn" class="btn"><img src="./images/icon-cart.svg" alt=""></button></li>
+                    <li class="navbar-item"><button id="imgbtn" class="btn imgbtn active"><img src="./images/image-avatar.png" class="activeimg" style="width: 50px;" alt=""></button></li>
+                </ul>
+            </div>
+            
+            </nav>
         </div>
-        
-        </nav>
     </header>
     <!-- END NAVBAR -->
 
     <!-- START BANNER -->
     <div class="container mb-5">
-        <div class="row">
+        <div class="row ms-5">
             <div class="col-lg-6 mt-5">
                 <img src="./images/image-product-1.jpg" width="500px" class="w-75 imgs" alt="">
                 <div class="row mt-4 w-75">
@@ -65,11 +69,21 @@
             </div>
             <div class="col-lg-6 mt-5 align-self-center">
                 <div class="container">
-                    <h6 class="mb-3">SNEAKER COMPANY</h6>
-                    <h1 class="mb-4">Fall Limited Edition Sneakers</h1>
+                    <h6 class="mb-3 textcolors">SNEAKER COMPANY</h6>
+                    <h1 class="mb-4 fw-bolder">Fall Limited Edition Sneakers</h1>
                     <p class="text-secondary">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-                    <h4>$125.00 <span class="">50%</span></h4>
-                    <h6 class="text-muted text-decoration-line-through">$250.00</h6>
+                    <h4><span class="fw-bolder">$125.00</span> <span class="fs-6 fw-bolder px-2 py-1 ms-2 rounded-1 bgcolors">50%</span></h4>
+                    <h6 class="text-muted text-decoration-line-through fw-bolder">$250.00</h6>
+                    <div class="row">
+                        <div class="col-3 rounded-2 d-flex justify-content-center align-items-center whitecolors">
+                            <button id="minusbtn" class="btn btn-sm"><img src="./images/icon-minus.svg" alt=""></button>
+                            <span id="text" class="mx-3">0</span>
+                            <button id="addbtn" class="btn btn-sm"><img src="./images/icon-plus.svg" alt=""></button>
+                        </div>
+                        <div class="col-9 text-center w-50  ms-5  d-grid">
+                            <button id="addcartbtn" class="px-3 py-3 rounded-3 border-0 orangecolors"><i class="fas fa-shopping-cart"></i> <span class="text-decoration-none fw-bolder">Add to cart</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

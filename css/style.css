@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
 
 .imgs{
     border-radius: 20px;
@@ -6,6 +10,43 @@
 
 .img2s{
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.hoverparents{
+    position: relative;
+}
+
+.hoverlines::before{
+    content:'';
+    width: 100%;
+    height: 3px;
+    background-color: hsl(26, 100%, 55%);
+
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+.hoverlines:hover.hoverlines::before{
+    transform: scale(1);
+}
+
+.hoverlines:hover{
+    color: #000 !important;
+    font-weight: bold;
+}
+
+#checkoutbtn,#imgbtn{
+    box-shadow: none;
+}
+
+#imgbtn{
+    border-radius: 100%;
 }
 
 .parentdivs{
@@ -22,4 +63,41 @@
     position: absolute;
     top: 0;
     left: 12px;
+
+    cursor: pointer;
+}
+
+.textcolors{
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+    letter-spacing: 1px;
+}
+
+.bgcolors{
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+}
+
+.whitecolors{
+    background-color: hsl(223, 64%, 98%);
+}
+
+.orangecolors{
+    color: #fff;
+    background-color: hsl(26, 100%, 55%);
+}
+
+#addbtn,#minusbtn{
+    border: none;
+    box-shadow: none;
+}
+
+#addcartbtn:active{
+    transform: scale(0.98);
+}
+
+.imgbtn.active .activeimg{
+    border-radius: 100%;
+    border: 2px solid hsl(26, 100%, 55%);
 }
