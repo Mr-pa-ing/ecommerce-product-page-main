@@ -36,8 +36,12 @@
                     <li class="navbar-item hoverparents"><a href="#" class="nav-link text-muted hoverlines me-2">Contact</a></li>
                 </ul>
                 <ul class="navbar-nav align-items-center">
-                    <li class="navbar-item"><button id="checkoutbtn" class="btn"><img src="./images/icon-cart.svg" alt=""></button></li>
-                    <li class="navbar-item"><button id="imgbtn" class="btn imgbtn active"><img src="./images/image-avatar.png" class="activeimg" style="width: 50px;" alt=""></button></li>
+                    <li class="navbar-item">
+                        <button id="checkoutbtn" class="btn  position-relative"><img src="./images/icon-cart.svg" class="position-relative" alt="">
+                            <span class="position-absolute top-40 start-10 translate-middle badge rounded-pill orangecolors">3</span>
+                        </button>
+                    </li>
+                    <li class="navbar-item"><button id="profile" class="btn profile active"><img src="./images/image-avatar.png" class="activeimg" style="width: 50px;" alt=""></button></li>
                 </ul>
             </div>
             
@@ -52,19 +56,10 @@
             <div class="col-lg-6 mt-5">
                 <img src="./images/image-product-1.jpg" width="500px" class="w-75 imgs" alt="">
                 <div class="row mt-4 w-75">
-                    <div class="col-lg-3 parentdivs">
-                        <div class="hovercolors"></div>
-                        <img src="./images/image-product-1-thumbnail.jpg" class="img2s" width="80px" alt="">
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="./images/image-product-2-thumbnail.jpg" class="img2s" width="80px" alt="">
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="./images/image-product-3-thumbnail.jpg" class="img2s" width="80px" alt="">
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="./images/image-product-4-thumbnail.jpg" class="img2s" width="80px" alt="">
-                    </div>
+                    <div class="col-lg-3 ms-3 boxs bg1 active"></div>
+                    <div class="col-lg-3 ms-3 boxs bg2"></div>
+                    <div class="col-lg-3 ms-3 boxs bg3"></div>
+                    <div class="col-lg-3 ms-3 boxs bg4"></div>
                 </div>
             </div>
             <div class="col-lg-6 mt-5 align-self-center">
@@ -91,12 +86,53 @@
     <!-- END BANNER -->
 
 
+    <!-- START MODAL AREA  -->
+    <div class="modalboxs">
+        <h5 class="p-3 border-bottom">Cart</h5>
+        <div class="modalareas">
+            <!-- <span class="text-secondary">Your cart is empty.</span> -->
+            <div class="container">
+               <div class="row">
+                <div class="col-2 me-1">
+                    <img src="./images/image-product-1-thumbnail.jpg" width="50px" class="rounded-3" alt="">                  
+                </div>
+                <div class="col-8 ms-2">
+                    <span class="text-secondary">Fall Limited Edition Sneakers $125 x 3 <span class="fw-bold text-dark">$375</span></span>
+                </div>
+                <div class="col-1 align-self-center">
+                    <button class="btn bg-transparent btn-sm" style="box-shadow: none;"><i class="fas fa-trash-alt text-secondary"></i></button>
+                </div>
+               </div>
+               <div class="d-grid mt-5">
+                   <button id="outbtn" class="btn rounded-3 fw-bold orangecolors" style="box-shadow: none;">Checkout</button>
+               </div>
+            </div>                
 
+        </div>
+    </div>
 
-
-
-
-
+    <div class="modalbox2">
+        <div class="products">
+            <button id="closebtn" class="btn bg-transparent"><i class="fas fa-times fa-2x" style="color: hsl(26, 100%, 55%);"></i></button>
+            <div class="product-container">
+                <div class="img-carousel">
+                    <img src="./images/image-product-1.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
+                    <img src="./images/image-product-2.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
+                    <img src="./images/image-product-3.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
+                    <img src="./images/image-product-4.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
+                </div>
+                <button id="prevbtn" class="btn bg-light btn-lg imgbtn"><i class="fas fa-chevron-left"></i></button>
+                <button id="nexbtn" class="btn bg-light btn-lg imgbtn"><i class="fas fa-chevron-right"></i></button>
+                <div class="thumb-container">
+                    <div class="bg1"></div>
+                    <div class="bg2"></div>
+                    <div class="bg3"></div>
+                    <div class="bg4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL AREA  -->
 
     <!-- bootstrap css1 js2  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

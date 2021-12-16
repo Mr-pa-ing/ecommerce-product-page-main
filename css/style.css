@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 body{
+    height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -41,11 +42,11 @@ body{
     font-weight: bold;
 }
 
-#checkoutbtn,#imgbtn{
+#checkoutbtn,#profile{
     box-shadow: none;
 }
 
-#imgbtn{
+#profile{
     border-radius: 100%;
 }
 
@@ -97,7 +98,179 @@ body{
     transform: scale(0.98);
 }
 
-.imgbtn.active .activeimg{
+.profile.active .activeimg{
     border-radius: 100%;
     border: 2px solid hsl(26, 100%, 55%);
+}
+
+.modalboxs{
+    width: 300px;
+    height: 220px;
+    background-color: rgb(255, 250, 250);
+
+    position: absolute;
+    top: 11%;
+    right: 10%;
+
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+
+    display: none;
+    animation-name: boxani;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+.modalboxs.active{
+    display: block;
+}
+
+@keyframes boxani {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.modalareas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg1{
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/image-product-1-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bg2{
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/image-product-2-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bg3{
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/image-product-3-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bg4{
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/image-product-4-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boxs{
+    position: relative;
+    overflow: hidden;
+}
+
+.boxs::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: hsla(25, 100%, 94%, 0.616);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 10px;
+
+    visibility: hidden;
+}
+
+.boxs.active.boxs::before{
+    visibility: visible;
+}
+
+.products{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.modalbox2{
+    background-color: rgba(0,0,0,0.8);
+
+    position: absolute;
+    inset: 0;
+}
+
+.product-container{
+    position: relative;
+}
+
+#closebtn{
+    margin-left: 400px;
+    box-shadow: none;
+}
+
+.thumb-container{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imgbtn{
+    position: absolute;
+    top: 35%;
+}
+
+.imgbnt:focus{
+    outline: none;
+}
+
+.imgbtn:active{
+    transform: scale(0.98);
+}
+
+#prevbtn{
+    box-shadow: none;
+    left: -5%;
+}
+
+#nexbtn{
+    box-shadow: none;
+    right: 5%;
+}
+
+.modalbox2{
+    display: none;
+}
+
+.img-carousel{
+    width: 400px;
+    display: flex;
+
+    overflow: hidden;
+}
+
+#outbtn:active{
+    transform: scale(0.98);
 }
