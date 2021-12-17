@@ -38,7 +38,7 @@
                 <ul class="navbar-nav align-items-center">
                     <li class="navbar-item">
                         <button id="checkoutbtn" class="btn  position-relative"><img src="./images/icon-cart.svg" class="position-relative" alt="">
-                            <span class="position-absolute top-40 start-10 translate-middle badge rounded-pill orangecolors">3</span>
+                            <span class="position-absolute top-40 start-10 translate-middle badge rounded-pill orangecolors qtytexts"></span>
                         </button>
                     </li>
                     <li class="navbar-item"><button id="profile" class="btn profile active"><img src="./images/image-avatar.png" class="activeimg" style="width: 50px;" alt=""></button></li>
@@ -90,25 +90,17 @@
     <div class="modalboxs">
         <h5 class="p-3 border-bottom">Cart</h5>
         <div class="modalareas">
-            <!-- <span class="text-secondary">Your cart is empty.</span> -->
-            <div class="container">
-               <div class="row">
-                <div class="col-2 me-1">
-                    <img src="./images/image-product-1-thumbnail.jpg" width="50px" class="rounded-3" alt="">                  
+            <div id="checkout-container" class="container">
+                <p id="emptycart" class="text-secondary p-5 ms-3">Your cart is empty.</p>   
+            </div>                       
+         </div>
+        <div class="container">
+            <div class="row">
+                <div class="d-grid mb-3">
+                    <button id="outbtn" class="btn rounded-3 fw-bold orangecolors" style="box-shadow: none;display: none;">Checkout</button>
                 </div>
-                <div class="col-8 ms-2">
-                    <span class="text-secondary">Fall Limited Edition Sneakers $125 x 3 <span class="fw-bold text-dark">$375</span></span>
-                </div>
-                <div class="col-1 align-self-center">
-                    <button class="btn bg-transparent btn-sm" style="box-shadow: none;"><i class="fas fa-trash-alt text-secondary"></i></button>
-                </div>
-               </div>
-               <div class="d-grid mt-5">
-                   <button id="outbtn" class="btn rounded-3 fw-bold orangecolors" style="box-shadow: none;">Checkout</button>
-               </div>
-            </div>                
-
-        </div>
+            </div>
+           </div>
     </div>
 
     <div class="modalbox2">
@@ -117,17 +109,14 @@
             <div class="product-container">
                 <div class="img-carousel">
                     <img src="./images/image-product-1.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
-                    <img src="./images/image-product-2.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
-                    <img src="./images/image-product-3.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
-                    <img src="./images/image-product-4.jpg" class="rounded-3 imgcarousels" width="400px" alt="">
                 </div>
                 <button id="prevbtn" class="btn bg-light btn-lg imgbtn"><i class="fas fa-chevron-left"></i></button>
                 <button id="nexbtn" class="btn bg-light btn-lg imgbtn"><i class="fas fa-chevron-right"></i></button>
                 <div class="thumb-container">
-                    <div class="bg1"></div>
-                    <div class="bg2"></div>
-                    <div class="bg3"></div>
-                    <div class="bg4"></div>
+                    <div class="bg1 boxs thumbboxs active"></div>
+                    <div class="bg2 boxs thumbboxs"></div>
+                    <div class="bg3 boxs thumbboxs"></div>
+                    <div class="bg4 boxs thumbboxs"></div>
                 </div>
             </div>
         </div>
